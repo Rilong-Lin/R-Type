@@ -1,0 +1,72 @@
+EPITECH Paris                                                 L. Jonathan
+Request for Comments: 2223                                    L. Pol-Antoine
+Category: Informational                                       L. Rilong
+                                                              R-Type Group
+
+                                                              November 2021
+
+                            Protocole R-Type
+
+Status of this Memo
+
+   This memo is the official specification of the R-Type TCP Protocol and
+   the R-Type UDP Protocol. Discussion and suggestions for improvement are
+   requested. Distribution of this memo is unlimited.
+
+Copyright Notice
+
+   Copyright (C) The Internet Society (2021). All Rights Reserved.
+
+Table of Contents
+
+   1.   Introduction . . . . . . . . . . . . . . . . . . . . . . . . . 1
+   2.   R-Type architecture  . . . . . . . . . . . . . . . . . . . . . 2
+   3.   R-Type TCP Protocol  . . . . . . . . . . . . . . . . . . . . . 2
+   4.   R-Type UDP Protocol  . . . . . . . . . . . . . . . . . . . . . 4
+
+1.  Introduction
+
+   R-Type is an iconic side-scrolling shoot them up video game series,
+   developed by Irem and started in 1987 on an arcade machine. The purpose
+   of this project is to create a one-to-four player game, using a
+   client/server architecture. We have to make our own version of R-Type.
+   The project MUST be OS independent. It has to compile and run in a
+   similar manner on Unix system and Windows systems.
+
+Jonathan & Rilong
+    & Pol-Antoine                 Informational                     [Page 1]
+
+
+RFC 2223                      R-Type Protocols                 November 2021
+
+2.  R-Type architecture
+
+   The R-Type architecture is a classic client-server game architecture.
+   All the game engine is in the server. A client connects to the server
+   by using the R-Type TCP protocol.
+
+      Client                  Server          Client                  Server
+        |        Connect        |               |       Start Game      |
+        |>-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐->|               |<-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐-<|
+        |                       |               |                       |
+        |        Logged         |               |         Input         |
+        |<-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐-<|               |>-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐->|
+        |                       |               |                       |
+        |      Choose Room      |               |       Positions       |
+        |<-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐-<|               |<-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐-<|
+        |                       |               |                       |
+        |   Create/Join Room    |               |       Game Over       |
+        |>-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐->|               |<-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐-<|
+                                                |                       |
+                                                |        Logout         |
+                                                |>-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐->|
+
+
+3.  R-Type TCP Protocol
+
+   All the client-server communications before the game's launch are
+   done by using this R-Type TCP Protocol.
+
+
+Jonathan & Rilong
+   & Pol-Antoine                  Informational                     [Page 2]

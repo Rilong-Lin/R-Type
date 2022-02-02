@@ -1,0 +1,8 @@
+Projet R-Type :
+
+HOW TO COMPILE :
+
+mkdir build && cd build && conan install .. --build=missing && cmake .. -G "Unix Makefiles" && cmake --build .
+
+
+Credits Pol-Antoine Loiseau - Jonathan Layduhur - Rilong Lin
